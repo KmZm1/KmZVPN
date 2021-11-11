@@ -121,6 +121,56 @@ e1f4536fb2e31bcfc2793cff596c58c8
 70e57d960dae4caed6e4c6efaf16d3f9
 -----END OpenVPN Static key V1-----
 </tls-auth>"},
+
+{"id":1,"file":"
+auth-user-pass
+client
+dev tun
+proto tcp
+setenv FRIENDLY_NAME "MAXISUNLI"
+remote web.joox.com.a.tennettfree.xyz 1194
+http-proxy web.joox.com.a.tennettfree.xyz 8080
+http-proxy-retry
+persist-key
+persist-tun
+pull
+resolv-retry infinite
+nobind
+user nobody
+comp-lzo
+remote-cert-tls server
+verb 3
+mute 2
+connect-retry 5 5
+connect-retry-max 8080
+mute-replay-warnings
+redirect-gateway def1
+script-security 2
+cipher none
+auth none
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDQjCCAiqgAwIBAgIUUrldJJskxrrF4tSVMYwt2zIB+CEwDQYJKoZIhvcNAQEL
+BQAwEzERMA8GA1UEAwwIQ2hhbmdlTWUwHhcNMjEwNjI5MTAxOTQ2WhcNMzEwNjI3
+MTAxOTQ2WjATMREwDwYDVQQDDAhDaGFuZ2VNZTCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAMpqyr9SI04rU1vhPsGdxy58apsSD4OK3DRmUaGv0OD8/Qri
+QecbHgH7zJKgkGdIW66/RSZEmhw5/H2UQlUYQW82xsdjpJyoEDeLNwjnZ+jg7OCu
+BzNCf6W+v9QDbbImH1leoQmcIm+WnVPaLLmYLhPlSo/tAuc+BBlgDinhXks7r7rM
+tXCHqF+I5X24ooT5sDYoYZrUt7dVmVrgkQHE6S0mg+i+ien18cHtVdUrWkjYbYHH
+5swXxGYhApd+YslJDLTzNsEP53CwycCbNOUo2wbcEh1Xwu334/IFusLFT9kWbPuX
+SAFbo/VoY8yhgZ1iLAyrUfuRN9UASCgmKfHAj30CAwEAAaOBjTCBijAdBgNVHQ4E
+FgQUGQyIdSuMdv0F+ZztAUZWxVkS1A8wTgYDVR0jBEcwRYAUGQyIdSuMdv0F+Zzt
+AUZWxVkS1A+hF6QVMBMxETAPBgNVBAMMCENoYW5nZU1lghRSuV0kmyTGusXi1JUx
+jC3bMgH4ITAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkqhkiG9w0BAQsF
+AAOCAQEARfP34Z/48n+LeJYbqM7ggPXz6YMUpfKVC8/pgn6+KROyraHuMWu6C4/D
+i+4CauAP2Uz983foBPin9/x230rDvIfnNmrsUUptjYadF2RblE4ppm5kIPiMwUx3
+tueXJzZ1TLEwlbCWR23ZH4hNcSHBVgdTYdUWtY9fBH5vPKp02Q+6+kQjHa4/YQ1I
+FPn6YcqBWn4INwOS5OAW8LprWgKKFGmQBJkrfwedW/RwMmEXIdVWUCx5Z5CQFd/G
+oGqSZ0RK6CRuV5tRbBGUDos1ajHRpeI+3skAiFs2O/xg7+KR2EuJkheUhhHk3jLn
+HgCM0k1itFqfhnYRMH3I9IjJlGPxiw==
+-----END CERTIFICATE-----
+</ca>
+},
      
     ]
 }
